@@ -49,20 +49,20 @@ You'll need to run the game as a dedicated RCON server and some kind of RCON cli
 | Function | Arguments | Finishes when |
 |---|---|---|
 | `walk_to` | `{x=, y=, stop_within=?, timeout=?}` | within `stop_within` (default 0.35) of the target |
-| `mine_at` | `{x=, y=, item=?, count=?, timeout=?}` | `count` of `item` mined, or the ore tile / tree is gone. Needs to be in reach: 2.7 tiles for ore, normal reach for trees |
+| `mine_at` | `{x=, y=, item=?, count=?, timeout=?}` | `count` of `item` mined, or until ore tile / tree is gone. Needs to be in reach: 2.7 tiles for ore, normal reach for trees |
 
 ### Non-Blocking actions (returns an id)
 
 | Function | Arguments | Finishes when |
 |---|---|---|
-| `hand_craft` | `{recipe=, count=?, timeout=?}` | the product count reaches its target. Only one tracked craft per product at a time (`already_crafting` returns the running id); use `count` for several |
+| `hand_craft` | `{recipe=, count=?, timeout=?}` | crafts until product count reaches its target. Only one craft per product at a time (`already_crafting` returns the running id). Use `count` for multiples |
 
 ### Instant actions
 
 | Function | Arguments | Returns |
 |---|---|---|
 | `place_entity` | `{name=, position={x=, y=}, direction=?}` | `{ok, name, unit_number, position, direction}`. The position snaps to the build grid; needs the item and build reach |
-| `cancel_all` | — | cancels the body queue and all crafts (ingredients refunded); each gets a `cancelled` result |
+| `cancel_all` | — | cancels  queued tasks and all crafts (ingredients refunded); each gets a `cancelled` result |
 
 ### Results
 
