@@ -1,0 +1,18 @@
+# Python client and its virtual environment: not published yet
+client/
+
+# Python leftovers anywhere else
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Factorio saves and packaged mod builds
+*.zip
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

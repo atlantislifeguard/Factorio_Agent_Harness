@@ -1,0 +1,9 @@
+{
+  "name": "agent-bridge",
+  "version": "0.1.0",
+  "title": "Agent Bridge",
+  "author": "you",
+  "description": "Exposes an embodied, tick-driven action interface for an external agent via RCON.",
+  "factorio_version": "2.0",
+  "dependencies": ["base >= 2.0"]
+}
